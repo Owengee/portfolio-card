@@ -1,0 +1,182 @@
+@use "global" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: $bodyBackgroundColor;
+}
+
+.EmailButton {
+  @include EmailButton;
+  background-color: $ComplementaryColor;
+  color: $SocialIconsBackground;
+  cursor: pointer;
+
+  img {
+    padding-right: 0.5rem;
+  }
+}
+.EmailButton:hover {
+  filter: brightness(50%);
+}
+
+.LinkedinButton {
+  @include LinkedinButton;
+  color: $ComplementaryColor;
+  cursor: pointer;
+
+  img {
+    padding-right: 0.5rem;
+  }
+}
+.LinkedinButton:hover {
+  filter: brightness(50%);
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $SocialIconsBackground;
+  border-radius: 0px 0px 10px 10px;
+  padding: 0 3.5rem;
+  width: 19.81rem;
+  height: 4rem;
+}
+
+.socialIcons img:hover {
+  filter: brightness(200%);
+}
+
+.Card_Image {
+  @include CardImage;
+}
+
+.card_wrap {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-column: auto;
+  place-items: center;
+}
+
+.main_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 19.81rem;
+  background-color: $CardBackgroundColor;
+  padding: 1.5rem 2rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+.Card_Owner_Name {
+  color: $ComplementaryColor;
+  font-weight: $HeavyWeight;
+  font-size: $HeavyFontSize;
+  padding-bottom: 0.3rem;
+  text-align: center;
+}
+
+.Card_Owner_Career {
+  color: $AccentColor;
+  font-weight: $LightWeight;
+  font-size: $LightSize;
+  padding-bottom: 0.2rem;
+  text-align: center;
+}
+
+.Card_Owner_Website {
+  font-weight: $LightWeight;
+  font-size: $TextFontSize;
+  line-height: $TextLineHeight;
+  text-align: center;
+  color: $MainContentHeaderTextColor;
+  text-decoration: none;
+  padding-bottom: 0.5rem;
+}
+
+.About_Card_Owner {
+  font-weight: $HeavyFontSize;
+  font-size: $MainContentHeadingFontSize;
+  line-height: $TextLineHeight;
+  color: $MainContentHeaderTextColor;
+  text-align: center;
+  padding-bottom: 0.4rem;
+}
+
+.About_Card_Owner_Details {
+  font-weight: $LightWeight;
+  font-size: $TextFontSize;
+  line-height: $TextLineHeight;
+  color: $BodyTextColor;
+  text-align: justify;
+  padding-bottom: 0.7rem;
+}
+
+.About_Card_Owner_Details a {
+  color: $AccentColor;
+  text-decoration: none;
+  padding: 0 0.2rem;
+}
+.About_Card_Owner_Details a:hover {
+  font-weight: $HeavyWeight;
+}
+.Interests_Card_Owner {
+  font-weight: $HeavyFontSize;
+  font-size: $MainContentHeadingFontSize;
+  line-height: $TextLineHeight;
+  color: $MainContentHeaderTextColor;
+  text-align: center;
+  padding-bottom: 0.4rem;
+}
+
+.Interests_Card_Owner_Details {
+  font-weight: $TextFontSize;
+  font-size: $TextFontSize;
+  line-height: $TextLineHeight;
+  color: $BodyTextColor;
+  text-align: center;
+  padding-bottom: 0.8rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .card_wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+  }
+  .main_content {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    border-radius: 0px 10px 0px 0px;
+  }
+  .socialIcons {
+    width: 30rem;
+  }
+  .Card_Image {
+    width: 26.5rem;
+    border-radius: 10px 0px 0px 10px;
+  }
+  .Card_Owner_Website {
+    padding-bottom: 1.5rem;
+  }
+  .socialIcons {
+    border-radius: 0px 0px 10px 0px;
+  }
+}
